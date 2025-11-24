@@ -6,16 +6,20 @@
 </head>
 <body>
   <h1>我的音乐页面</h1>
+  <p>点击下面的播放按钮来听音乐：</p>
 
-  <!-- 隐藏控件，只用 JS 控制 -->
-  <audio id="player">
+  <!-- 最简单、最保险的写法：浏览器自带播放器控件 -->
+  <audio id="player" controls>
     <source src="exercise1.mp3" type="audio/mpeg">
+    <!-- 这一行只是“备用文字”，你也可以删掉 -->
     你的浏览器不支持 audio 标签。
   </audio>
 
-  <button onclick="document.getElementById('player').play()">播放</button>
-  <button onclick="document.getElementById('player').pause()">暂停</button>
+  <p>
+    <!-- 额外再加两个按钮，用 JS 控制播放/暂停 -->
+    <button onclick="document.getElementById('player').play()">播放</button>
+    <button onclick="document.getElementById('player').pause()">暂停</button>
+  </p>
 </body>
 </html>
-
 
